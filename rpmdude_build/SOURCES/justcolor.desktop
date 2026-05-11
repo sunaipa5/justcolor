@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Justcolor
+Exec=justcolor
+Icon=justcolor
+Type=Application
+StartupWMClass=org.sunaipa.justcolor
+Categories=Utility;
+Terminal=false
+Keywords=eyedropper;colorpicker;picker;

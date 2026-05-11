@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: "3"
+
+tasks:
+  default:
+    desc: Print all tasks
+    cmd: task --list-all
+    silent: true
+  build:
+    cmds:
+      - gcc main.c -o justcolor $(pkg-config --cflags --libs gtk4 dbus-1)
+      - strip justcolor
+    silent: true
+  run:
+    cmds:
+      - task: build
+      - ./justcolor
+    silent: true
+  build-rpm:
+    cmds:
+      - task: build
+      - cp ./justcolor rpmdude_build/SOURCES/
+      - rpmdude build
+    silent: true
