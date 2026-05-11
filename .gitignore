@@ -1,2 +1,5 @@
 justcolor
 *.rpm
+*.tar.gz
+*.tar.xz
+/bundles
